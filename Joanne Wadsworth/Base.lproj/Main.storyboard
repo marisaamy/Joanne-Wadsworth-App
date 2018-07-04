@@ -24,18 +24,8 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="image 4 (name)" translatesAutoresizingMaskIntoConstraints="NO" id="Kwy-36-Uhp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="58"/>
                             </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-1H-Inp">
-                                <rect key="frame" x="168" y="610" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="vEy-e0-CBA" appends="YES" id="dG8-KL-uHe"/>
-                                    <segue destination="ZaD-6L-dF5" kind="push" id="lhh-zF-S2F"/>
-                                </connections>
-                            </pageControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-Kv-xBI">
-                                <rect key="frame" x="0.0" y="170" width="375" height="432"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-Kv-xBI">
+                                <rect key="frame" x="0.0" y="170" width="375" height="437"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Books" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yc1-Cn-14H">
@@ -49,6 +39,8 @@
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="33b-cr-3p9" secondAttribute="bottom" id="0e6-FT-pLz"/>
+                            <constraint firstItem="hfJ-Kv-xBI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="25g-cp-Lpr"/>
+                            <constraint firstItem="hfJ-Kv-xBI" firstAttribute="top" secondItem="Yc1-Cn-14H" secondAttribute="bottom" constant="25" id="90e-1n-3dq"/>
                             <constraint firstItem="33b-cr-3p9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Bz5-fc-lGZ"/>
                             <constraint firstItem="33b-cr-3p9" firstAttribute="top" secondItem="Yc1-Cn-14H" secondAttribute="bottom" constant="25" id="Jst-fb-1KA"/>
                             <constraint firstItem="Kwy-36-Uhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OWW-0q-hlh"/>
@@ -57,10 +49,15 @@
                             <constraint firstAttribute="trailing" secondItem="Kwy-36-Uhp" secondAttribute="trailing" id="Zj6-EJ-nfk"/>
                             <constraint firstItem="Kwy-36-Uhp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZtE-9D-1QT"/>
                             <constraint firstItem="Yc1-Cn-14H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="bGc-rU-S0g"/>
+                            <constraint firstItem="hfJ-Kv-xBI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kgm-41-6Sp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yc1-Cn-14H" secondAttribute="trailing" constant="115" id="mDA-C9-3GJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hfJ-Kv-xBI" secondAttribute="bottom" constant="60" id="tQX-Sb-k3m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="hfJ-Kv-xBI" id="kb1-dR-pad"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="vEy-e0-CBA"/>
